@@ -12,7 +12,8 @@ from datetime import datetime, date, time
 # In[ ]:
 now = datetime.now()
 ## html 소스 내용을 받아 온다.
-html = Get현재고시환율소스(now)
+## html = Get현재고시환율소스(now)
+html = now.today()
 
 print('안녕하세요. Python')
 print(html)
