@@ -118,3 +118,29 @@ def Get고시회차(html):
     rinfo = rinfo.map(lambda tag : tag.text)
     return rinfo
 
+
+## 크롤링 실행 및 저장 
+## 하나은행 접속 
+## 현재 환율 조회 URL https://www.kebhana.com/cms/rate/wpfxd651_01i_01.do
+## 하나은행의 화율은 post 방식으로 요청
+## body Form 컬렉션 전송
+
+## 오늘 일자.
+now = datetime.now()
+
+## html 소스 내용을 받아 온다. 
+html = Get현재고시환율소스(now)
+
+## 고시회차 정보 css=fl
+rateInfo = Get고시회차(html)
+
+## 환율 추출
+rateDF = 환율데이터추출(html)
+
+## 크롤링된 환율 데이터 출력
+print(rateInfo[0], rateInfo[2], rateInfo[1])
+print(rateDF)
+
+# 데이터 저장. 
+# saveFileName = '환율{0}_{1}.xlsx'.format('{0.year}-{0.month:02d}-{0.day:02d}'.format(now),  rateInfo[1])
+# rateDF.to_excel(saveFileName)

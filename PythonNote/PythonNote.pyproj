@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f4f6221e-5b89-42ef-8e0b-e15ac6abc9ef</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonNote.py</StartupFile>
+    <StartupFile>HanaBankExchange.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
